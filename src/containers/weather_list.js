@@ -8,16 +8,19 @@ class WeatherList extends Component {
   renderWeather(cityData) {
     const name = cityData.city.name;
     const temperatures = cityData.list.map((weather) => weather.main.temp - 273.15); // in celcius
-    const pressure = cityData.list.map((weather) => weather.main.pressure);
-    const humidity = cityData.list.map((weather) => weather.main.humidity);
+    const pressures = cityData.list.map((weather) => weather.main.pressure);
+    const humidities = cityData.list.map((weather) => weather.main.humidity);
     return (
       <tr key={name}>
         <td>{name}</td>
         <td>
-          {/*<Sparklines width={180} height={90} data={temperatures}>*/}
-          {/*<SparklinesLine color={'red'}/>*/}
-          {/*</Sparklines>*/}
-          <ChartComponent data={temperatures} color={'red'}/>
+          <ChartComponent data={temperatures} color={'red'} textColor={'text-danger'} units={'\u2103'}/>
+        </td>
+        <td>
+          <ChartComponent data={pressures} color={'green'} textColor={'text-success'} units={'hPa'}/>
+        </td>
+        <td>
+          <ChartComponent data={humidities} color={'black'} textColor={'text-dark'} units={'%'}/>
         </td>
       </tr>
     )
@@ -26,13 +29,13 @@ class WeatherList extends Component {
   render() {
     console.log(this.props.weather);
     return (
-      <table className="table table-over">
+      <table className="table table-hover">
         <thead>
           <tr>
-            <th>City</th>
-            <th>Temperature</th>
-            <th>Pressure</th>
-            <th>Humidity</th>
+            <th scope="col">City</th>
+            <th scope="col">Temperature (&#8451;)</th>
+            <th scope="col">Pressure (hPa)</th>
+            <th scope="col">Humidity (%)</th>
           </tr>
         </thead>
         <tbody>

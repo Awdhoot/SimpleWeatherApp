@@ -26,7 +26,7 @@ class SearchBar extends Component {
   render() {
     return (
       <form onSubmit={this.onFormSubmit.bind(this)}
-            className="input-group mt-3">
+            className="input-group m-3">
         <input className="form-control"
                value={this.state.term}
                placeholder=" Get a 5 day forecast in your favorite city "
