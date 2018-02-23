@@ -1,25 +1,11 @@
-# ReduxSimpleStarter
+# SimpleWeatherApp - React + Redux
+Weather web app that - 
+* Lets you search get next 5 days weather (OpenWeatherAPI) of any city by searching city name.
+* Weather for cities is listed in a table with temperature, pressure and humidity as a sparkline with avg value
+* City is shown in a map (Gooogle Maps API)
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This  is just for learning purpose (React + Redux basics + Middlewares Intro + AJAX with redux)
 
-### Getting Started
+[Starter Kit](https://github.com/StephenGrider/ReactStarter/releases) 
 
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+[Udamy Course](https://www.udemy.com/react-redux/learn/v4/t/lecture/4284626?start=0)
