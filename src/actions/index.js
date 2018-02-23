@@ -8,7 +8,7 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 //action creator to make AJAX call to fetch weather data, returns an action with a type and optional payload
 export function fetchWeather(city) {
-  const url = `${ROOT_URL}&q=${city},us`;
+  const url = `${ROOT_URL}&q=${city}`;
   const request = axios.get(url, {});
   return {
     type: FETCH_WEATHER,
